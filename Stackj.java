@@ -33,7 +33,7 @@ public class Stackj {
     }
     public int size()
     {
-        return top++;
+        return top+1;
     }
     public boolean isFull()
     {
@@ -41,6 +41,7 @@ public class Stackj {
     }
     public void printStack()
     {
+        System.out.println("Stack :: ");
         for(int i=0;i<=top;i++)
         {
             System.out.println(arr[i]);
@@ -49,5 +50,12 @@ public class Stackj {
     public static void main(String[] args) {
         Stackj s= new Stackj(10);
         s.push(10);        
+        s.push(20);        
+        s.push(30);
+        s.printStack();   
+        s.pop();
+        s.printStack();
+        System.out.println("Size :: "+s.size());
+        System.out.println("Size :: "+s.size());
     }
 }
