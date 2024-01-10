@@ -61,7 +61,7 @@ class Stack {
         s.push(20);
         s.push(30);
         s.push(40);
-
+        System.out.println("Stack Peek ::"+s.peek());
         s.pop();       
     }
 }

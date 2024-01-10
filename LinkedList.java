@@ -1,8 +1,8 @@
-class LL
+class LinkedList
 {
     Node head;
     private int size;
-    LL(){
+    LinkedList(){
         size =0;
     }
     public class Node {
@@ -41,7 +41,7 @@ class LL
     {
         Node currNode=head;
         while (currNode!=null) {
-            System.out.println(currNode.data+" -> ");
+            System.out.print(currNode.data+" -> ");
             currNode=currNode.next;
         }
         System.out.println("null");
@@ -97,5 +97,16 @@ class LL
         }
         head.next=null;
         head=prevNode;
+    }
+    public static void main(String[] args) {
+        LinkedList list = new LinkedList();
+        list.addFirst("a");
+        list.addLast("b");
+        list.addLast("c");
+        list.addLast("d");
+        list.printList();
+        list.removeFirst();
+        list.removeLast();
+        list.printList();
     }
 }
